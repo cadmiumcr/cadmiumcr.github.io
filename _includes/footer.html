@@ -1,0 +1,17 @@
+<footer class="footer">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <a href="https://gitter.im/cadmiumcr">
+                    <img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join Cadmium Chat on Gitter">
+                </a>
+            </div>
+            <div class="column copyright">
+                Cadmium is developed and maintained by <a href="https://watzon.tech" target="_blank">Chris Watson</a>.
+            </div>
+        </div>
+    </div>
+</footer>
+{% for js in site.jsarr %}
+<script type="text/javascript" src="{{ js.name | prepend: site.baseurl }}"></script>
+{% endfor %}

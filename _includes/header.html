@@ -1,0 +1,36 @@
+<header>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="{{ site.url }}">
+                    <img src="{{ "/img/logo.png" | prepend: site.baseurl }}" height="28">
+                </a>
+
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-end">
+                    {% for my_page in site.navigation_links %}
+                        {% if my_page.title %}
+                            <a href="{{ my_page.url }}" class="navbar-item">
+                                {{ my_page.title }}
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                    <a href="https://github.com/{{ page.github_username }}" class="navbar-item">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/{{ page.twitter_username }}" class="navbar-item">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

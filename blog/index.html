@@ -1,0 +1,18 @@
+---
+layout: default
+title: Cadmium - Blog
+---
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Posts</h1>
+    <div class="posts">
+      {% for post in site.posts %}
+        <div class="post">
+          <div><small class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</small></div>
+          <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

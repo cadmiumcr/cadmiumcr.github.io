@@ -1,0 +1,40 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+@import "variables";
+@import "reset";
+@import "bulma";
+@import "syntax-highlighting";
+
+.contents-list {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.post {
+    .post-header {
+        margin-bottom: $size-4;
+    }
+
+    .post-meta {
+        font-size: $size-7;
+        color: $grey-light;
+    }
+
+    .post-date {
+
+    }
+
+    .post-title {
+        font-size: $size-4;
+        margin-bottom: 0px;
+    }
+}
+
+.copyright {
+    text-align: right;
+}
